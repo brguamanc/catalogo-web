@@ -10,7 +10,8 @@
     align-items: center;
     height: 60px;
     width: 100%;
-    background: #f7cac9;
+    /*background: #f7cac9;*/
+    background-image: url("./img/fondo.jpg");
   }
  
   .logo a {
