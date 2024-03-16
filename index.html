@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es-ES"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corean Shop</title>
+    <link rel="stylesheet" href="./ecommerce.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>
+      <div class="logo"><a href="#">Catálogo de Corean Shopping</a></div>
+    </header>
+    <section>
+      <div class="section">
+        <div class="section2">
+          <div class="container" id="items-container">
+            <!-- Los elementos de la lista se generarán aquí -->
+          </div>
+        </div>
+      </div>
+     
+    </section>
+    <footer>
+      <div class="footer0">
+        <h1>ShoPperZ</h1>
+      </div>
+      <div class="footer1 ">
+        Connect with us at<div class="social-media">
+          <a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  
+  </body>
+  <script>
+    // Definir el arreglo de objetos con la información de cada artículo
+    var itemsData = [
+  {
+    img_url: "./img/img-1.jpeg",
+    name: "Polvos matificantes - Innisfree",
+    price: "$18",
+    info: "Este polvo mineral nos ayuda a controlar la grasa y el sebo para prevenir el sebo del rostro, además absorbe de manera eficaz el polvo del rostro. Contiene componentes minerales para equilibrar la humedad y el aceite."
+  },
+  {
+    img_url: "./img/img-2.jpg",
+    name: "Bálsamo desmaquillante - All Clean Balm",
+    price: "$19",
+    info: "Elimina el maquillaje y restos de protector solar, deja tu carita súper fresca y limpia. Evita la obstrucción de poros y la producción de espinillas y puntos negros. Uso en las noches y apto para todo tipo de piel."
+  },
+  {
+    img_url: "./img/img-3.jpg",
+    name: "Espuma facial limpiadora- Skin 1004",
+    price:"$25.50",
+    info: "Contiene un 84% Extracto de Centella Asiática para calmar e hidratar la piel. Limpia los poros y elimina las impurezas de la piel con bicarbonato de sodio, el cual es un limpiador natural. Proporciona una limpieza suave con aceite de coco de origen natural dejando la piel hidratada. Utiliza ingredientes de grado verde EWG para garantizar que la espuma de la ampolla sea adecuada para las pieles sensibles. Recomendable para pieles mixtas a grasas. "
+  },
+  {
+    img_url: "./img/img-4.jpg",
+    name: "Espuma facial con ácido hialurónico - Torriden",
+    price: "$26",
+    info: "Esta gentil espuma limpiadora elimina eficazmente las impurezas y el exceso de grasa, al mismo tiempo que proporciona una hidratación profunda a la piel. Su textura rica y cremosa crea una lujosa espuma que deja la piel con una sensación de extrema limpieza, suavidad y frescura.  Ideal para todo tipo de piel."
+  },
+  {
+    img_url: "./img/img-5.jpg",
+    name: "Vitamina C pura - Jumiso",
+    price: "$27",
+    info: "Previene el envejecimiento. Repara las imperfecciones, marcas y manchas. Favorece la formación de colágeno. Disminuye el daño solar. Apto para todo tipo de piel."
+  },
+  {
+    img_url: "./img/img-6.jpg",
+    name: "Niacinamida - The Ordinary",
+    price: "$17.99",
+    info: "Exfolia, alisa, y descongestiona los poros. Ayuda a aclarar las imperfecciones del acné haciendo que la piel se sane. Perfecto para pieles grasas con tendencia a padecer de acné. Limpia los poros y permite que la piel respire mejor. Indicado especialmente para tratar el acné y las marcas de acné."
+  },
+  {
+    img_url: "./img/img-7.jpg",
+    name: "Sérum Numbuzin 3",
+    price: "$27.00",
+    info: "Nutre e hidrata profundamente la piel. Contiene una mezcla de extractos naturales e ingredientes como: 5% de pantenol, centella asiática y glicerina para calmar e hidratar la piel seca y sensible. Este sérum también ayuda a mejorar la textura y la elasticidad de la piel, dejándola suave, flexible y tersa. Su fórmula no pegajosa y de rápida absorción lo convierte en un complemento perfecto para tu rutina diaria de cuidado de la piel. Uso en la mañana y noche en el rostro limpio."
+  },
+  {
+    img_url: "./img/img-8.jpg",
+    name: "Vitamina C combinada – Jumiso",
+    price: "$27",
+    info: "Sérum altamente concentrado para hacer brillar tu piel, manteniéndola radiante y protegida, además de ayudarla a mantener un tono uniforme, tener una piel sana y balanceada. Contiene diferentes vitaminas que harán ver y sentir tu piel como nunca antes: Vitamina A: ayuda a reducir líneas de expresión y arrugas. Vitamina B: mantiene la piel hidratada, reduce manchas y zonas enrojecidas, renueva las células y reduce visibilidad de poros. Vitamina C: antioxidante, cicatriza y mejora las afecciones, además de ser imprescindible en la formación de colágeno. Vitamina D: ayuda a protegerse de las agresiones externas y de la deshidratación. Vitamina E: ayuda a retrasar los efectos del envejecimiento. Vitamina K: calma, además brinda un aspecto brillante y saludable. Apto para todo tipo de piel. "
+  },
+  {
+    img_url: "./img/img-9.jpg",
+    name: "Ácido glicólico - The Ordinary 100ml ",
+    price: "$22.50",
+    info: "Reduce manchas. Reduce arrugas y líneas de expresión. Reduce la textura y puntos negros. Estimula la producción de colágeno. Brinda luminosidad. Despigmenta axilas. Se recomienda su uso 2 veces por semana en la noche, en el rostro limpio y seco, seguido de esto aplicas un hidratante."
+  },
+  {
+    img_url: "./img/img-10.jpg",
+    name: "Protector solar - Beauty of Joseon ",
+    price: "$24",
+    info: "Apto para todo tipo de piel, especialmente mixta a seca. Contiene extractos de arroz y probioticos para aclarar y nutrir tu piel. Protección eficaz y de amplio espectro. Es súper ligero y no deja sensación grasosa ni pegajosa."
+  },
+  {
+    img_url: "./img/img-11.jpg",
+    name: "Protector solar Soft finish - Missha ",
+    price: "$27",
+    info: "Ideal para piel mixta a grasa. Toque seco. O deja sensación grasosa y pegajosa."
+  },
+  {
+    img_url: "./img/img-12.jpg",
+    name: "Protector solar en sérum - Skin 1004",
+    price: "$24.00",
+    info: "Contiene ácido hialurónico y centella asiática. Un protector solar que bloquea los rayos UV, al mismo tiempo hidrata la piel. Deja la piel con un acabado humectado y húmedo. Apto para todo tipo de piel, especialmente mixta a seca, incluyendo sensibles."
+  },
+  {
+    img_url: "./img/img-13.jpg",
+    name: "Protector solar en barra - Tocobo",
+    price: "$24",
+    info: "Protector solar en barra que calma y controla la producción de sebo con sus complejos herbales, dejándola suave y protegida de los rayos UV. Su formato facilita la aplicación y reaplicación sin necesidad de usar las manos. Extracto de algodón: mantiene la piel humectada y la protege de los agresores ambientales. Extracto herbal AC: calma el enrojecimiento e irritación. Gingseng: combate el fotoenvejecimiento revitaliza, hidrata y aporta vitaminas y minerales. Aceite de semilla de jojoba: previene las arrugas y neutraliza los radicales libres. Recomendado para todo tipo de piel."
+  },
+  {
+    img_url: "./img/img-14.jpg",
+    name: "Protector solar mate en barra - Beauty of Joseon",
+    price: "$25",
+    info: "Protector solar en stick matificante y alisante, de fácil aplicación incluso encima del maquillaje. Con extracto de té verde y Artemisia Capillaris (ajenjo o hierba santa). Apto para piel mixta a grasa."
+  },
+  {
+    img_url: "./img/img-15.jpg",
+    name: "Crema gel de ácido hialurónico - Torriden",
+    price: "$23",
+    info: "Contiene niacinamida para iluminar la piel y adenosina para mejorar la apariencia de líneas finas y arrugas. Con una infusión de 7 ingredientes de origen natural que brindan varios beneficios para la piel, incluido el extracto de hoja e aloe vera para calmar y el extracto de gingseng rojo para nutrir y revitalizar la piel. Apto para todo tipo de piel, se recomienda su uso en la mañana y noche. "
+  }
+];
+  
+    // Función para generar el HTML de cada artículo
+    function generateItemHTML(item) {
+      return `
+        
+        <div class="items">
+          <div class="img"><img src="${item.img_url}" alt=""></div>
+          <div class="name">${item.name}</div>
+          <div class="price">${item.price}</div>
+          <div class="info">${item.info}</div>
+    
+        </div>
+      `;
+    }
+  
+    // Función para agregar todos los elementos al contenedor
+    function renderItems() {
+      var itemsContainer = document.getElementById('items-container');
+      itemsData.forEach(function(item) {
+        itemsContainer.innerHTML += generateItemHTML(item);
+      });
+    }
+  
+    // Llamar a la función para renderizar los elementos
+    renderItems();
+  </script>
+  </html>
