@@ -8,17 +8,52 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 60px;
+    min-height: 100dvh;
     width: 100%;
-    /*background: #f7cac9;*/
+    background: #f7cac9;
     background-image: url("./img/fondo.jpg");
   }
- 
+  @keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.4); }
+    to { transform: none; }
+}
+
+  .icono{
+    display: flex;
+    justify-content: center;
+
+  }
+  .icono img{
+    width: 50px;
+    height: 50px;
+    animation: latidos 1s infinite;
+  }
   .logo a {
     color: black;
     font-size: 35px;
     font-weight: 500;
     text-decoration: none;
+
+  }
+  .deslizar a {
+    display: block;
+    margin-top: 70px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .imagen{
+
+    display: flex;
+    justify-content: center;
+    margin: 50px ;
+  }
+  .imagen img{
+ 
+    width: 100px;
+    height: 100px;
   }
   ion-icon {
     width: 30px;
@@ -36,7 +71,7 @@
   }
   
 
-  
+
   .heading1 {
     opacity: 0;
   }
@@ -53,7 +88,7 @@
   .section2 .container .items {
     margin: 10px;
     width: 300px;
-    height: 400px;
+    height: auto;
     background-color: white;
     border: 2.5px solid #a2c8cc    ;
     border-radius: 12px;
@@ -63,13 +98,14 @@
     text-align: center;
     background-color: #c5e0dc;
     height: 25px;
-    padding-top: 4px;
+    height: auto;
+    padding: 4px;
     color: black;
     margin: 0;
   }
   .section2 .container .items .price {
     float: left;
-    padding-left: 10px;
+    padding: 10px;
     display: block;
     width: 100%;
     color: #ff8097;
@@ -77,8 +113,9 @@
 
   }
   .section2 .container .items .info {
-    padding-left: 10px;
+    padding :10px;
     color: black;
+    text-align: justify;
   }
   .section2 .container .items .img img {
     width: 300px;
@@ -219,7 +256,7 @@
       flex-direction: column;
     }
     .logo a {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .section2 .container .items {
@@ -228,6 +265,6 @@
     .section2 .container .items .img img{
         width:100%;
     }
- 
+  
   }
   
